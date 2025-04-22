@@ -1,0 +1,210 @@
+📌 WHILE 
+
+1. Definir una función que retorna la suma de los primeros " números naturales".
+
+
+def suma_pri_nat(n):     #Definición de la función: Se crea una función llamada suma_pri_nat que recibirá un parámetro n (el número hasta el cual queremos sumar).
+    suma = 0             #Inicialización de variable: Se crea una variable suma que empezará en 0 y almacenará el resultado acumulado de la suma.
+    i = 1                #Contador inicializado: Se crea una variable i que servirá como contador, empezando en 1 (el primer número natural a sumar).
+    while i <= n:        #Mientras el valor de i sea menor o igual que n, el bucle seguirá ejecutándose
+        suma = suma + i  #Acumulación de la suma: En cada iteración, se suma el valor actual de i a la variable suma.
+        i = i + 1        # Se aumenta i en 1 para pasar al siguiente número natural en la siguiente iteración.
+    return suma          #Cuando el bucle termina (cuando i supera a n), se devuelve el valor acumulado en suma.
+print(suma_pri_nat(10))  #imprimir por pantalla la función: Se llama a la función con n = 10 (suma de los primeros 10 números naturales) y se imprime el resultado.
+
+#Output: 55
+
+____________________________________________________________________________________________________________________________________________________________
+2. Definir una función que retorna el promedio de los primeros  números naturales.
+
+
+def promedio_naturales(n):  #Calcula el promedio de los primeros n números naturales
+    
+   
+    suma = 0                 # Inicializamos el acumulador de suma
+    i = 1                    # Comenzamos desde el primer número natural    
+    while i <= n:            # Mientras no hayamos llegado al número n
+        suma = suma + i      # Acumulamos el valor actual
+        i = i + 1            # Pasamos al siguiente número    
+    return suma / n          # Calculamos el promedio
+
+print(promedio_naturales(5)) #Output: 3.0
+
+
+____________________________________________________________________________________________________________________________________________________________
+
+3. Definir una función que calcule la suma de los números impares hasta "n" inclusive.
+ 
+
+def suma_de_impares(n):         # Se crea una función llamada suma_de_impares que recibirá un parámetro n (el número hasta el cual queremos sumar). 
+    suma = 0                    # Inicializamos una variable suma en 0, donde guardaremos el resultado final.
+    i = 1                       # Empezamos a contar desde i = 1, el primer número impar.
+    while i <= n:               # El bucle se repetirá mientras i sea menor o igual que n.
+        if i % 2 == 1:          # Esta es la condición para detectar imparesSolo si i es impar, se ejecuta suma = suma + i.
+            suma = suma + i     # Si i es impar, lo sumamos al total acumulado en suma.
+        i = i + 1               # Incrementamos i en 1 para pasar al siguiente número, esto es para finalizar bucle porque sino sería infinito.
+    return suma                 #Cuando el bucle termina (porque i > n), devolvemos el resultado almacenado en suma.
+print(suma_de_impares(9))       # Output: 25 (1 + 3 + 5 + 7 + 9)
+
+
+____________________________________________________________________________________________________________________________________________________________
+4. Definir una función que imprima los n primeros números en orden inverso.
+
+ 
+
+def ordenInverso(n): #Esto define una función llamada ordenInverso que toma un parámetro n.
+    while n >= 0:    #Este bucle se ejecutará mientras el valor de n sea mayor o igual a 0.
+        print(n)     #imprime el valor actual de n.
+        n = n - 1    #Reduce el valor de n en 1 en cada iteración (decremento).
+ordenInverso (5)     # Llama a la función con el valor 5, lo que imprimirá los números del 5 al 0 en orden descendente.
+
+
+#Output: 5 4 3 2 1 0
+____________________________________________________________________________________________________________________________________________________________
+
+5. Una función que tome 2 valores, un número y true o false. Si el segundo argumento es true hace la suma de pares, sino de impares hasta el numero. 
+
+
+def funcion (numero, verdad):
+  i = 0
+  suma = 0
+  while i <= numero:
+    if verdad == True: #NECESITO QUE SUME LOS PARES
+      if i % 2 == 0:
+        suma = suma + i
+    else:              #NECESITO QUE SUME LOS IMPARES
+      if i % 2 == 1:
+        suma = suma + i
+    i = i + 1
+  print (suma)
+
+funcion(5, True)
+
+#Output:6
+
+____________________________________________________________________________________________________________________________________________________________
+
+6. Una función que tome dos valores m y n, si m es mayor que n imprime el mayor numero en orden inverso sino orden natural
+
+def ImprimiElMayoro(m, n):
+    if m > n:
+        while m >= n:
+            print(m)
+            m= m-1
+    else:
+        while m <= n:
+            print(m)
+            m= m+1
+ImprimiElMayoro(15,10)
+
+o 
+
+
+def ordenInverso(n):
+    while n >= 0:
+        print(n)
+        n = n - 1
+
+def ordenNatural(n):
+    i = 0
+    while i  <= n:
+        print (i)
+        i = i + 1
+
+ordenInverso(5)
+ordenNatural(5)
+
+def Comparar( m , n):
+    if m > n:
+        ordenInverso(m)
+    else:
+        ordenNatural(n)
+Comparar (2, 5)
+#Output:
+
+____________________________________________________________________________________________________________________________________________________________
+7. Calcular la productoría hasta n. Usar una función que retorne el valor calculado. 
+
+def funcion(numero):
+    i = 1
+    acumulador = 1
+    while(i<=numero):
+        acumulador = acumulador * i
+        i = i + 1
+    return acumulador
+
+print(funcion(5))
+
+#Output:120
+
+
+____________________________________________________________________________________________________________________________________________________________
+
+8. Definir una función que retorna la suma de los primeros "números naturales" impares.
+
+def Pares(numero):
+  i = 1
+  acumuladorpar =0
+  acumuladorimpar =0
+  while i <= numero:
+    if i % 2 == 1:
+      acumuladorimpar = acumuladorimpar + i 
+    else:
+      acumuladorpar = acumuladorpar + i
+    return acumuladorpar, acumuladorimpar
+a, b = Pares(10)
+print(a, b)
+
+
+
+____________________________________________________________________________________________________________________________________________________________
+9. Definir una función que imprima los n primeros números en orden inverso.
+
+def inverso (n):
+    while n >= 1 :
+        print(n)n = n-1
+        
+(inverso (5))
+
+
+
+____________________________________________________________________________________________________________________________________________________________
+
+10. Definir una función para calcular el numero factorial de n (numero pasado como argumento). n! = n*(n-1)!
+
+def factoria(n):
+  a=1
+  b=1
+  while b <= n:
+      a = a * b
+      b = b + 1
+  return a 
+print(factoria(5))
+
+
+
+____________________________________________________________________________________________________________________________________________________________
+11. Definir una función que tome dos valores "m" y "n": si "m" es mayor que "n" imprime el mayor número en orden inverso; sino, en orden natural.
+
+def MayorInverso(m,n):
+  if m > n:
+    while m > 0:
+      print(m)
+      m = m-1
+  else:
+    i=1
+    while i<n:
+      print(i)
+      i=i+1
+      
+MayorInverso(10,8)
+ 
+
+____________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+

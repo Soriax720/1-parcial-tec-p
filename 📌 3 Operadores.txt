@@ -1,0 +1,79 @@
+📌 Operadores 
+
+Operadores Relacionales 
+>  mayor que 
+<  menor que 
+== igual a 
+!= distinto a 
+>= mayor o igual 
+<= menor o igual 
+--------------------------------------
+
+Fórmula de paridad :
+n % 2 == 0
+n % 2 == 1
+
+Fórmula de múltiplo de  a % b == 0
+Fórmula de promedio suma/n
+
+Fórmula de producto en while 
+i = 1
+acumulador = 1
+
+Fórmula de suma en while 
+acumulador = 0
+i = 1
+
+Fórmula de multiplicación while 
+acumulador = 1
+i = 1
+
+Fórmula para imprimir while en orden natural 
+print(m)
+m= m+1
+
+Fórmula para imprimir en orden inverso
+print(m)
+m= m-1
+
+--------------------------------------
+Operadores Matemáticos 
++  suma = a + b 
+-  resta= b - a
+*  multiplicación = a*b
+/  división =a/b
+// división enetra a//b
+%  resta = a % b 
+** potencia= a**b 
+
+-------------------------------------
+
+Operadores de Entrada y Salida
+entrada = input 
+salida  = print 
+
+--------------------------------------
+
+Operadores Lógicos 
+a= true 
+b= false
+print (a and b) #False  devuelve true si ambas condiciones son verdaderas 
+print (a or b)  #True   devuelve True si al menos una de las condiciones es verdadera 
+print (not a)   #False  invierte el valor lógico 
+----------------------------------------------------------------------------
+
+Operadores de Asignación
+x= 10
+x+=5-->  x = x+5 p ej 15 
+x-=2-->  x = x-2 p ej 8  
+x*=3 --> x = x*3 p ej 39 
+----------------------------------------------------------------------------
+
+Números:
+
+enteros    int      n° sin decimal 
+flotantes  float    n° con decimal 
+complejos  complex  n° con parte real e imaginaria 
+
+----------------------------------------------------------------------------
+

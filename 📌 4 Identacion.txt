@@ -1,0 +1,47 @@
+📌Identación  
+
+
+1. Sangría Básica (4 espacios por nivel)
+
+if condición:  # Nivel 0 (sin sangría)
+   
+    print("Esto está dentro del if")   # Nivel 1 (4 espacios)
+    if otra_condición:   # Nivel 1 (4 espacios)
+        
+        print("Esto está anidado")  # Nivel 2 (8 espacios)
+----------------------------------------------------------------------------
+
+2. Estructuras con Sangría Correcta
+
+a) Estructura if-elif-else:
+
+if condición1:          # ← Sin sangría
+    # Bloque if         # ← 4 espacios
+    acción1()           # ← 4 espacios
+elif condición2:        # ← Alineado con if
+    # Bloque elif       # ← 4 espacios
+    acción2()           # ← 4 espacios
+else:                   # ← Alineado con if/elif
+    # Bloque else       # ← 4 espacios
+    acción3()           # ← 4 espacios
+
+
+b) Estructura while:
+while condición:        # ← Sin sangría
+    # Bloque while      # ← 4 espacios
+    acción1()           # ← 4 espacios
+    if condición2:      # ← 4 espacios (mismo nivel que acción1)
+        # Bloque if     # ← 8 espacios
+        acción2()       # ← 8 espacios
+    acción3()           # ← 4 espacios (vuelve al nivel del while)
+
+----------------------------------------------------------------------------
+3. Reglas Esenciales de Sangría
+
+Todo bloque: Después de la siguiente línea siempre lleva sangría
+
+Mismo nivel: Todas las líneas del mismo bloque deben tener la misma sangría
+
+Fin de bloque: Volver al nivel anterior de sangría marca el fin del bloque
+
+Consistencia: Usa siempre 4 espacios (recomendado) o tabs, pero no los mezcles

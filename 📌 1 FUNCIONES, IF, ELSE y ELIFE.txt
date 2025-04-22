@@ -1,0 +1,132 @@
+📌 FUNCIONES, IF, ELSE y ELIFE 
+
+
+1. Definir una función que recibe como argumento 2 números y retorna su suma.
+ 
+numero1 = 5
+numero2 = 4
+
+def suma(numero1 , numero2):
+  return numero1 + numero2
+print(suma(numero1, numero2))
+
+#Output:9
+
+____________________________________________________________________________________________________________________________________________________________
+
+2. Definir una función que retorna True si el número pasado por argumento es par.
+ 
+
+def es_par(a):
+  if a % 2 == 0:
+    return True 
+  else: 
+    return False 
+print (es_par(4)) 
+
+#Output:True 
+
+____________________________________________________________________________________________________________________________________________________________
+3. Definir una función que toma los argumentos a, b y retorna True si a > b.
+
+def Mayor_que(a,b):
+  if a > b :
+    return True
+  else: 
+    return("fin")
+print(Mayor_que(10,5))
+
+
+#Output:True 
+
+____________________________________________________________________________________________________________________________________________________________
+4. Definir una función que retorna el mayor de los dos números pasados como argumento.
+ 
+
+def Mayordelosdos(a,b):
+  if a > b :
+    return a
+  else: 
+    return b 
+print (Mayordelosdos(10,8))
+
+
+#Output:10
+
+____________________________________________________________________________________________________________________________________________________________
+
+5. Definir una función que retorna True si a es múltiplo de b.
+
+
+def multiplo(a,b):
+  if b % a == 0:
+    return True
+  else: 
+    return False  
+print (multiplo(2,4)) 
+#Output:True
+____________________________________________________________________________________________________________________________________________________________
+
+6. Definir una función que recibe como argumento 2 números y retorna su suma
+
+def suma(a, b):
+return a + b
+
+
+____________________________________________________________________________________________________________________________________________________________
+7. Definir una función que recibe como argumento 2 números y retorna suma si el primer argumento es mayor al segundo, de lo contrario retorna su resta
+
+
+def suma_rara(a,b):
+if a > b:
+return a+ b
+return a - b
+
+
+def suma_rara(a,b):
+if a > b:
+return a + 9
+else:
+return a - b
+
+____________________________________________________________________________________________________________________________________________________________
+
+8. Definir una función que retorna True si el número pasado por argumento es par sino retorna False
+
+def funcion(a):
+  if a % 2 == 0:
+    return True 
+  else:
+    return False
+print(funcion(3))
+
+
+____________________________________________________________________________________________________________________________________________________________
+
+9. Definir una función que retorna el mayor de los dos números pasados como argumento.
+
+def funcion(a,b):
+  if a < b:
+    return a
+  else:
+    return b 
+print(funcion(3, 2))
+
+____________________________________________________________________________________________________________________________________________________________
+
+10. Definir una función que calcula el perímetro de un circulo dado su radio y lo retorna.
+
+
+def perimetro(radio):
+  return 2*3.14159*radio 
+print(perimetro(16))
+
+o 
+
+PI= 3.14159
+def perimetro(radio):
+  return 2*PI*radio 
+print(perimetro(16))
+
+____________________________________________________________________________________________________________________________________________________________
+
