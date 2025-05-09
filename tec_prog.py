@@ -171,3 +171,116 @@ def productoria(n):
     i = i + 1
     
  return acc
+#######################################
+###ejer 1
+v = [3, 5, 6, 7, 10, 12, 13]
+def suma(vector):
+  i = 0
+  acumulador = 0
+  ultima = len(vector)-1
+  while i <= ultima:
+    acumulador = acumulador + vector[i]
+    i = i + 1
+  return acumulador
+####ejer 2
+vector = [1,2,3,22,5,0]
+max_ = None
+i = 1
+while i < len(vector):
+   if max_ == None or vector[i] > max_:
+      max_ = vector[i]
+   i = i + 1
+
+
+
+
+#ejer 3
+def producto(vect):
+  acc = 1
+  i = 0
+  while i <= len(vect)-1:
+    acc = acc * vect[i]
+    
+    i = i + 1
+    
+  return acc
+
+v = [3, 5, 6, 7, 10, 12, 13]
+
+#ejer 4
+def media(vector):
+  total = suma(vector)
+  return total / len(vector)
+
+h = [3,2,1]
+
+##Escribe una función que reciba una lista de números 
+# y retorne una nueva lista con los números pares.
+
+print(len([1,2,3,4,5])-1)
+    
+def _min(array, desde, hasta):
+   if len(array) == 0 or desde > hasta:
+      return None
+   n = hasta
+   i = desde
+   while i <= n:
+      if i == desde or array[i] < m:
+         m = array[i]
+         p = i
+      i = i + 1
+   return p
+
+def sumar(array,desde,hasta):
+   if len(array) == 0 or desde > hasta:
+      return None
+   n = hasta
+   i = desde
+   a = 0
+   while i <= n:
+      a += array[i]
+      i = i + 1
+      return a
+
+def indexOf(arr,valor):
+    i=0
+    n=len(arr)-1
+    while i<=n:
+        if arr[i] == valor:
+            return i
+        i+=1
+    return None 
+vector = [5,3,8,2,9]
+print(indexOf(vector,9))
+
+def parsito(vec):
+   
+   i = 0
+   ultimo = len(vec)-1
+   cant_pares = 0
+   suma_pares = 0
+   while i <= ultimo:
+      if vec[i] % 2 == 0:
+         suma_pares = suma_pares + vec[i]
+         cant_pares += 1
+      i+= 1
+   return suma_pares/cant_pares
+
+
+##Implementa una función que retorne los primeros N números de la secuencia de 
+# Fibonacci.
+
+f0 = 0
+f1 = 1
+f2 = 1
+fn = fn-1 + fn-2
+
+def fibo(f):
+   n1 = 0
+   n2 = 1
+   i = 2
+   while i < f:
+      n3 = n1 + n2
+      n1 = n2
+      n2 = n3
+      i = i + 1

@@ -251,7 +251,7 @@ def suma(n):
         a = a + i
         i = i + 1 #PARA QUE LA CONDICION SE LOGRE
     return a
-print(suma(10))
+#print(suma(10))
 
 ##classe 6
 """

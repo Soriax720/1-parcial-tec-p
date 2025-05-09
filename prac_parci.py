@@ -202,21 +202,4 @@ def mostrar(n):
 
 #print(mostrar(5))
 
-def cualMax(n1,n2):
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+#Definir uDefinir una función que imprima los n primeros números en orden inverso
