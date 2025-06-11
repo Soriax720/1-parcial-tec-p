@@ -171,7 +171,7 @@ def productoria(n):
     i = i + 1
     
  return acc
-#######################################
+#####################     VECTORES     ##################
 ###ejer 1
 v = [3, 5, 6, 7, 10, 12, 13]
 def suma(vector):
@@ -182,7 +182,7 @@ def suma(vector):
     acumulador = acumulador + vector[i]
     i = i + 1
   return acumulador
-####ejer 2
+################ ejer 2################
 vector = [1,2,3,22,5,0]
 max_ = None
 i = 1
@@ -194,7 +194,7 @@ while i < len(vector):
 
 
 
-#ejer 3
+#ejer 2
 def producto(vect):
   acc = 1
   i = 0
@@ -217,7 +217,7 @@ h = [3,2,1]
 ##Escribe una función que reciba una lista de números 
 # y retorne una nueva lista con los números pares.
 
-print(len([1,2,3,4,5])-1)
+#print(len([1,2,3,4,5])-1)
     
 def _min(array, desde, hasta):
    if len(array) == 0 or desde > hasta:
@@ -242,16 +242,16 @@ def sumar(array,desde,hasta):
       i = i + 1
       return a
 
-def indexOf(arr,valor):
+def busca1(arr,valor):
     i=0
     n=len(arr)-1
     while i<=n:
         if arr[i] == valor:
             return i
         i+=1
-    return None 
+    return -1 
 vector = [5,3,8,2,9]
-print(indexOf(vector,9))
+print(busca1(vector,11))
 
 def parsito(vec):
    
@@ -269,7 +269,7 @@ def parsito(vec):
 
 ##Implementa una función que retorne los primeros N números de la secuencia de 
 # Fibonacci.
-
+"""
 f0 = 0
 f1 = 1
 f2 = 1
@@ -283,4 +283,12 @@ def fibo(f):
       n3 = n1 + n2
       n1 = n2
       n2 = n3
-      i = i + 1
+      i = i + 1"""
+def buscar2(vector, valor): # vector ordenado, sabemos tope (cuando cortar)
+    i = 0
+    while i <= len(vector)-1 and vector[i] <= valor:
+        if vector[i] == valor:
+            return i
+        i += 1
+    return -1
+

@@ -1,0 +1,67 @@
+Ejercicio 1
+Escribe una funcion promedio_elementos(v) que recibe un vector v de numeros enteros y retorne el promedio.
+def promedio_elementos(v):
+    suma = 0
+    i = 0
+    while i < len(v):
+        suma = suma + v[i]
+        i = i + 1
+    return suma / len(v)
+
+
+v =[1,2,3,4]
+resultado = promedio_elementos(v)
+print(promedio_elementos(v))
+
+
+Ejercicio 2
+Crea una funcion invertir_vector(v) que reciba un vector v y retorne un nuevo vector con los elementos en orden inverso.
+v = [5, 10, 15, 20]
+def invertir_vector(v):
+    i = 0
+    v2 = []
+    while i < len(v):
+        v2 = [v[i]] + v2
+        i = i + 1
+    return v2
+print(invertir_vector(v))
+
+Ejercicio 3: Buscar el minimo y maximo de un vector
+Escribe una funcion min_max_vector(v) que reciba un vector v y retorne una tupla con el valor minimo y maximo.
+v = [8, 3, 1, 9, 2]
+def min_max_vector(v):
+    max_valor = v[0]
+    min_valor = v[0]
+    i = 1
+    while i < len(v):
+        if v[i] > max_valor:
+            max_valor = v[i]
+        if v[i] < min_valor:
+            min_valor = v[i]
+        i += 1 
+    
+    return min_valor, max_valor
+print(min_max_vector(v))
+
+Ejercicio 4
+Desarrolla una funcion remover_duplicados(v) que reciba un vector v y retorne un nuevo vector sin elementos duplicados, manteniendo el orden de aparicion.v
+def existe(vector, valor):
+    i = 0
+    while i < len(vector):
+        if vector[i] == valor:
+            return True
+        i = i + 1
+    return False
+
+def remover_duplicados(vector):
+    r = []
+    i = 0
+    while i < len(vector):
+        if existe(r, vector[i]) == False:
+            r.append(vector[i])
+        i = i + 1
+    return r
+
+v = [1, 2, 2, 3, 4, 4, 5]
+resultado = remover_duplicados(v)
+print(resultado)
