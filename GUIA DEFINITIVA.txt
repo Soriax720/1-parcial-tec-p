@@ -1,0 +1,385 @@
+hola ! Soy de Adrogue
+
+# 1)
+#suma de elementos de un vector 
+#escribe una funcion que reciba una lista de numeros y retorne la suma de sus elementos
+v=[31,1,24,51423]
+acum=0
+i=0
+while i<len(v):
+    acum=acum+v[i]
+    print(acum)
+    i=i+1
+print(acum)
+# otra forma de hacer el 1 con función 
+def suma_elementos(vector):
+    suma=0
+    i=0
+    while i<len(vector): # se pone el nombre que declaro en funcion entre ()
+       suma= suma+vector[i]   
+       i=i+1  
+    return suma #nombre de la función 
+vector=[1,2,3,4,5,6]   
+print(suma_elementos(vector))
+ # 2)
+ # producto de un elemento en un vector.
+ #crea una función que reciba una lista y retorne el producto de sus elementos
+
+def producto_vector(vector):
+    i=0
+    acum=1
+    while i<len(vector):
+        acum=acum*vector[i]
+        i=i+1
+    print(acum)
+vector=[2,3,8,10]
+print(producto_vector(vector))
+# 3)numero mayor y menor en un vector.
+ # escribe un programa que,dado un vector de nùmeros ,encuentre el valor màximo y el valor del minimo 
+
+vector=[1,2,3,22,5,0]
+min_=None
+i=0
+while i<len(vector):
+   if min_==None or vector[i]<min_:
+      min_=vector[i]
+   i=i+1
+print(min_)
+
+max_=None
+i=0
+while i<len(vector):
+    if max_==None or vector[i]>max_:
+       max_=vector[i]
+    i=i+1
+print(max_)
+
+ # otra forma de hacer el 3 hacerlo con función 
+a=[1,2,-1,4,0] 
+def _min(array):
+   if len(array)==0:
+    return None
+   n=len(array)-1  # recorre hasta la ultima posición
+   i=0
+   while i<=n:
+    if i==0 or array[i]<m:
+      m=array[i]
+         
+    i=i+1
+   return m
+
+print(_min(a))
+
+ # 4 media de un vector. implementa una función que reciba una lista y retorne la media aritmetica de sus elementos 
+def media_aritmetica(vector):
+    suma=0
+    i=0
+    while i<len(vector):
+       suma=suma+vector[i]
+       i=i+1
+    media=suma/len(vector)
+    return media  # retorna 
+vector=[1,3,5,8,-1]
+
+print(media_aritmetica(vector)) 
+
+#  5)números pares en un vector. Escribe una función que reciba una lista de numeros y retorne una nueva lista con los numeros pares.
+
+def numeros_pares(vector):
+    pares=[]# inicio con una lista vacia para almacenar los números pares
+    i=0 # indice para recorrer el vector
+    while i< len(vector): 
+       if vector[i]%2==0:
+          pares.append(vector[i])
+       i=i+1
+    return pares # esta declarado en linea                                                                                                                                                                                 
+vector=[4,6,1,3,9,12,-14]                                                                   
+print(numeros_pares(vector))
+
+# 6)invertir un vector.Crea un programa que invierte el orden de los elementos de una lista.a
+
+def invierta(v):
+  i=len(v)-1 # longitud del vector
+  invertido=[]
+  while i >=0:
+    invertido.append(v[i])
+    i=i-1
+  return invertido
+b=[1,2,4,5,6,8,9,10]
+print(invierta(b))
+
+#7)contar elementos mayores  que un valor. implemente  una funcion  que reciba una lista y un  numero , y cuente cuantos elementos en la lista son mayores que ese numero.
+def contar_mayores(vector, valor):
+    i = 0
+    contador = 0
+    while i < len(vector):
+        if vector[i] > valor:
+            contador += 1
+        i += 1
+    return contador
+vector = [-1, 0, 3, 4, 5, 6]
+resultado= contar_mayores(vector,-1)
+print ("Contar elementos mayores que un valor son:",resultado)
+ # 8)multiplicar los elementos de un vector x un número.Escriba una función que reciba una lista y un número y retorne una nueva lista con cada elemento mutplicado por ese numero.
+def multiplicar_vector(vector,numero):
+  resultado=[]
+  i=0
+  while i< len(vector):
+     resultado.append(vector[i]*numero)
+     i=i+1
+  return resultado
+vector=[1,4,5,3,2]
+numero=2
+print(multiplicar_vector(vector,numero))
+ # 9)buscar crea una función que reciba una lista  y un numero y retorne True si el numero está en la lista , o False si no lo está.
+def buscar_binaria(lista,numero):
+   i=0
+   while i<len(lista):
+      if lista [i]==numero :
+         return True
+      i=i+1
+   return False
+lista=[1,4,6,8,9,12,15,-1]
+print(buscar_binaria(lista,5))
+print(buscar_binaria(lista,9))
+
+#11) Ordenar un vector.Escribe una función que ordene una lista de numeros de menor a mayor usando un algoritmo básico como burbuja
+def buscar_minimo(v,d,h):
+   i=d
+   j=None
+   while i<=h:
+     if i==0 or v[i]<m:
+      j=i
+      m=v[i]
+     i=i+1
+   return j
+p=buscar_minimo(v,0,3)
+print(v[p])
+
+def ordena(vector):
+   i=0
+   while i<=len(vector)-1:
+      p=buscar_minimo(vector,i,len(vector)-1)
+      tmp=vector[p]
+      vector[p]=vector[i]
+      vector[i]=tmp
+      i=i+1
+   print(vector)
+ordena(v)
+ #calcular el factorial de un numero.implementa una funcion que calcule el factorial de un numero utilizando ciclo while.
+def factorial(n):
+  if n==0 or n==1:
+    return 1
+  
+  return n*factorial(n-1)
+print(factorial(5))
+
+#19)Suma de los primeros N números naturales.Escibe una funcion que calcule la suma de los N numeros naturales usando while.
+
+def sumaPrimerosNNaturales(n):
+    if n < 0:
+        return None  # La suma no está definida para números negativos
+    suma = 0
+    i = 1
+    while i <= n:
+        suma += i
+        i += 1
+    return suma
+print(sumaPrimerosNNaturales(10))
+ #20) genera una tabla de multiplicar.crea una programa  que genere la tabla de multiplicar de un numero dado.
+a=[0,2,4,6,8,10,12]
+def tablita_de_primaria_de(n):
+   i=0
+   tablita=[]
+   while i<=10:
+      tablita.append(n*i)
+      i=i+1
+   return tablita
+print(tablita_de_primaria_de(4))
+
+#22)comprobar si un numero es primo.escribe una funcion para comprobar si es primo.
+def esPrimo(n):
+   if n <=1:
+     return False
+   i=2
+   while i*i<=n:
+      if n% i==0:
+         return False
+      i=i+1
+   return True
+#23)Lista dde numeros primos menores que N.crea una programa que genere una lista con todos los números primos menores que un número dado.
+def primosMenoresQue(n):
+    primos = []
+    i=2
+    while i < n:
+        if esPrimo(i):
+            primos.append(i)
+        i += 1
+    return primos
+print(primosMenoresQue(5))
+#24)sumar digitos  de un numero.implementa una función que reciba un numero entero y retorne la suma de sus digitos
+def suma_digitos(n):
+   suma=0 # inicio en 0 para alamcenar la suma de los digitos
+   while n> 0:
+      suma=n %10+ suma  #calculamos el ultimo digito de n 
+      n//=10 # eliminamos el ultimo digito de n utilizando la division entera
+   return suma
+print(suma_digitos(134))
+# 25) invertir un numero .Escribe un programa que invierta los digitos de un numero.
+def invertir_numero(n):
+   inverso=0
+   while n>0:
+      inverso= inverso*10+ n %10
+      n//=10
+   return inverso
+print(invertir_numero(13))
+#26)
+
+
+#27)verificar si una palabra es polindromo.
+#implementa una función que verifique si una palabra es una palindromo.
+def es_un_palindromo(palabra):
+    i = 0
+    m = (len(palabra) // 2) - 1
+
+    while i < m:
+        if palabra[i] != palabra[len(palabra) - 1 - i]:
+            return False
+        i = i + 1
+    return True
+
+print(es_un_palindromo(p))
+
+#29)Promedio de los elementos de un vector 
+# implementa un programa que calcule el promedio de los nuemros pares en una lisa.
+a=[1,2,3,4,88,12,10,15,17,21,7]
+
+def promedioPares(vector):
+    suma = 0
+    contador = 0
+    i = 0
+    while i < len(vector):
+        if vector[i] % 2 == 0:  # Verificar si el número es par
+            suma = suma +vector[i]
+            contador = contador+1
+        i = i+1
+    if contador == 0:
+        return None  # Si no hay números pares, retornar None
+    return suma / contador  # Retornar el promedio de los números pare
+print(promedioPares(a))
+# se usa cuando tenes dos vectores queres unirlo.vectores ordenados 
+a=[1,2,3]
+b=[2,2,5,9,6]
+def marge(v1,v2):
+    
+  i=0
+  j=0
+  r=[]
+  while i<len(v1) and j < len(v2):
+    if v1[i]<v2[j]:
+       r.append(v1[i])
+       i=i+1
+    else:
+       r.append(v2[j])
+       j=j+1
+  while i<len(v1):
+    r.append1(v1[i])
+    i=i+1
+  while j<len(v2):
+    r.append (v2[j])
+    j=j+1
+  return r
+  
+print(marge(a,b))
+a=[1,2,3]
+b=[2,2,5,9,6]
+def marge(v1,v2):
+    
+  i=0
+  j=0
+  r=[]
+  while i<len(v1) and j < len(v2):
+    if v1[i]<v2[j]:
+       r.append(v1[i])
+       i=i+1
+    else:
+       r.append(v2[j])
+       j=j+1
+  while i<len(v1):
+    r.append1(v1[i])
+    i=i+1
+  while j<len(v2):
+    r.append (v2[j])
+    j=j+1
+  return r
+  
+v=[1,2,3,5,6]
+print(v[1:4]) 
+def merge(v1,v2):
+    
+  i=0
+  j=0
+  r=[]
+  while i<len(v1) and j < len(v2):
+    if v1[i]<v2[j]:
+       r.append(v1[i])
+       i=i+1
+    else:
+       r.append(v2[j])
+       j=j+1
+  while i<len(v1):
+    r.append(v1[i])
+    i=i+1
+  while j<len(v2):
+    r.append (v2[j])
+    j=j+1
+  return r
+  
+#v=[1,2,3,5,6]
+#print(v[1:4]) 
+
+def merge_sort(vector):
+  if len(vector) == 1:
+    return vector
+
+  medio = len(vector) // 2
+  izq = merge_sort(vector[:medio])
+  der = merge_sort(vector[medio:])
+
+  return merge(izq, der)
+
+v = [5, 1, 0, -2, 1921, 2,4, -1, 2, 3, 1]
+print(merge_sort(v))    
+#11)def buscar_minimo(v,d,h):
+   i=d
+   j=None
+   while i<=h:
+     if j == None or v[i]<m:
+      j=i
+      m=v[i]
+     i=i+1
+   return j
+v=[1, 2, 5, 1, 2, 3]
+
+
+def ordena(vector):
+   i=0
+   while i<=len(vector)-1:
+      p=buscar_minimo(vector,i,len(vector)-1)
+      tmp=vector[p]
+      vector[p]=vector[i]
+      vector[i]=tmp
+      i=i+1
+   print(vector)
+ordena(v)
+def mayores(v, valor):
+    i = 0
+    acum = 0
+    while i < len(v):
+        if v[i] > valor:
+           acum += 1
+        i += 1
+    return acum
+v=[32, 1, 2, 4, 6]
+valor=2
+print(mayores(v, valor))

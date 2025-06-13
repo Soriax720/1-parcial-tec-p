@@ -13,6 +13,25 @@ def buscar_minimo(v, d, h):
     i = i + 1
   return j
 
+
+def encontrar_max_min(vector):
+    if not vector:
+        return None, None  
+
+    i = 1
+    maxi = vector[0]
+    mini = vector[0]
+
+    while i < len(vector):
+        if vector[i] > maxi:
+            maxi = vector[i]
+        if vector[i] < mini:
+            mini = vector[i]
+        i += 1
+
+    return maxi, mini
+
+
   
 def ordena(vector):    
   i = 0
